@@ -1,0 +1,94 @@
+body {
+	
+	padding: 0px;
+	margin: 0%;
+	background-image: url("/img/slider-01.jpg");
+}
+ul.nav.nav-pills li.nav-item a.nav-link{
+	margin-bottom: 2rem;
+	color: #110D05;
+}
+nav.navbar.navbar-expand-lg.bg-light{
+	background-color: #ffffff !important;
+}
+select.form-control{
+	border-radius: 0px;
+}
+li.nav-item a.nav-link{
+	padding: 0px 200px !important; 
+}
+a {
+	text-decoration: none;
+}
+div.banner{
+	
+	height: 1000px;
+	overflow: hidden;
+}
+
+section.booking-tab{
+	padding: 5rem !important;
+	margin-top: -2rem;
+}
+div.intro{
+	position: absolute;
+	left: 30%;
+	margin-top: 15rem !important;
+	left: .5rem;
+}
+div.banner img{
+	height: 300px;
+}
+
+#container {
+	display: flex;
+	 height: 89px
+}
+
+
+.logo {
+	font-family: Abril Fatface;
+	text-align: right;
+	font-size: 21px;
+	color: #110D05;
+	display: inline-block;
+	padding-left: 13px;
+	margin-right: 21px;
+	margin-top: 8px;
+    line-height: 13px;
+}
+
+.headerlinks {
+	list-style: none;
+	font-family: Abril Fatface;
+	text-align: right;
+	display: inline-flex;
+	padding: 8px;
+}
+
+.header-links {
+	color: #efefef;
+}
+
+.header-links:hover {
+    color: tan;
+    transition: all 0.4s ease;
+}
+
+li {
+	margin-right: 21px;
+	padding: 13px;
+}
+
+.main-view{
+	position: relative;
+}
+
+/*
+.booking-tab{
+	border-style: solid;
+	border-color: aliceblue;
+	background: #FFF;
+	background-size: contain;
+	border-radius: 15px;
+}*/
