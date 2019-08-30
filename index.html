@@ -1,156 +1,172 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.js"></script> -->
 	<link rel="stylesheet" href="style.csss">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-<title>Transportation Company</title>
+	<title>Transportation Company</title>
 </head>
-	<body>
-		<nav class="navbar navbar-expand-lg shadow-sm fixed-top navbar-light fixed-top" style="background: #ffffff;">
-			<a href="#" class="navbar-brand active">CREATION</a>
-			<button class="navbar-toggler" style="border-color: transparent;" type="button" data-toggle="collapse" data-target="#navbar">
-				MENU
-				<span class="navbar-toggler-icon"></span>
-			</button>
 
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">About</a>
-      				</li>
-      			<li class="nav-item">
-        			<a class="nav-link" href="#">Terminals</a>
-      				</li>
-					  <li class="nav-item">
-						<a class="nav-link" href="#">Routes</a>
-					</li>			
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>		
-				</ul>
+<body>
+	<nav class="navbar navbar-expand-lg shadow-sm fixed-top navbar-light fixed-top" style="background: #ffffff;">
+		<a href="#" class="navbar-brand active">CREATION</a>
+		<button class="navbar-toggler" style="border-color: transparent;" type="button" data-toggle="collapse"
+			data-target="#navbar">
+			MENU
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Terminals</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Routes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section class="container-fluid">
+		<div class="banner img-fluid"
+			style="z-index: -1090; position: relative; background-image: url('img/slider-01.jpg'); background-size: cover; background-attachment: fixed; background-repeat: no-repeat; height: 600px;">
+			<div class="intro" style="z-index: 1090; margin-top: 15rem;position: absolute; left: 5%;">
+				<h2 class="welcome lead display-3 text-left" style="top: 45rem;">CREATION</h2>
+				<p>Transportation Company</p>
+				<button class="btn btn-primary btn-lg" style="z-index: inherit;" href="#">Explore our World</button>
 			</div>
-		</nav>
-		<section class="container-fluid">
-			<div class="banner img-fluid" style="z-index: -1090; position: relative; background-image: url('img/slider-01.jpg'); background-size: cover; background-attachment: fixed; background-repeat: no-repeat; height: 600px;">
-				<div class="intro" style="z-index: 1090; margin-top: 15rem;position: absolute; left: 5%;">
-						<h2 class="welcome lead display-3 text-left" style="top: 45rem;">CREATION</h2>
-						<p>Transportation Company</p>
-						<button class="btn btn-primary btn-lg" style="z-index: inherit;" href="#">Explore our World</button>
+
+		</div>
+	</section>
+	<section class="container">
+		<section class="booking-tab shadow-sm"
+			style="background: #eeeeee; padding: 3rem; margin-top: -2rem; z-index: 1099;">
+			<!-- <ul class="nav nav-pills"> -->
+
+			<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="first-tab" data-toggle="pill" href="#book-a-ticket-tab" role="tab"
+						aria-controls="pills-home" aria-selected="true">BOOK A TICKET</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="booking-status-tab" data-toggle="pill" href="#pills-profile" role="tab"
+						aria-controls="pills-profile" aria-selected="false">BOOKING STATUS</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="rent-a-vehicle-tab" data-toggle="pill" href="#pills-contact" role="tab"
+						aria-controls="pills-contact" aria-selected="false">RENT A VEHICLE</a>
+				</li>
+			</ul>
+
+
+			<div class="tab-content" id="pills-tabContent">
+				<div class="tab-pane fade show active" id="book-a-ticket-tab" role="tabpanel"
+					aria-labelledby="pills-home-tab">
+					<form class="">
+						<div class="booking">
+							<div class="row">
+								<div class="col-xs-12 col-md-6 col-lg-4">
+									<p class="lead">Departure Terminal</p><br>
+									<select name="current-location" style="margin-top: -2rem;"
+										class="form-control form-control-lg" width=250px>
+										<option value="Lagos">Lagos</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-4">
+									<p class="lead">Arrival Terminal</p><br>
+									<select name="destination-location" style="margin-top: -2rem;"
+										class="form-control form-control-lg" width=250px>
+										<option value="Abuja">Abuja</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-4 text-center">
+									<label class="lead" for="Departure Date">Departure Date</label>
+									<input type="date" class="form-control form-control-lg">
+								</div>
+								<div class="col-xs-12 col-md-6 col-lg-4 text-center">
+									<Label for="No of passengers">No of passengers</Label>
+									<select name="no-of-passengers" class="form-control" id="">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+									</select>
+								</div>
+								<div class="col-xs-12 col-lg-8 text-center"><br>
+									<input type="submit" class="btn btn-outline-primary btn-lg" value="BOOK NOW"
+										style="width: 100%">
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
 
-			</div>
-		</section>
-		<section class="container">
-			<section class="booking-tab shadow-sm" style="background: #eeeeee; padding: 3rem; margin-top: -2rem; z-index: 1099;">
-					<!-- <ul class="nav nav-pills"> -->
-
-							<ul class="nav nav-pills mb-5" id="pills-tab" role="tablist">
-									<li class="nav-item">
-									  <a class="nav-link active" id="first-tab" data-toggle="pill" href="#book-a-ticket-tab" role="tab" aria-controls="pills-home" aria-selected="true">BOOK A TICKET</a>
-									</li>
-									<li class="nav-item">
-									  <a class="nav-link" id="booking-status-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">BOOKING STATUS</a>
-									</li>
-									<li class="nav-item">
-									  <a class="nav-link" id="rent-a-vehicle-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">RENT A VEHICLE</a>
-									</li>
-								  </ul>
-
-
-								  <div class="tab-content" id="pills-tabContent">
-									<div class="tab-pane fade show active" id="book-a-ticket-tab" role="tabpanel" aria-labelledby="pills-home-tab">
-											<form class="">
-													<div class="booking">
-														<div class="row">
-													<div class="col-xs-12 col-md-6 col-lg-4">
-														<p class="lead">Departure Terminal</p><br>
-														<select name="current-location" style="margin-top: -2rem;" class="form-control form-control-lg" width=250px>
-															<option value="Lagos">Lagos</option>
-															<option value="2">2</option>
-															<option value="3">3</option>
-														</select>
-														
-													</div>
-													<div class="col-xs-12 col-md-6 col-lg-4">
-															<p class="lead">Arrival Terminal</p><br>
-															<select name="destination-location" style="margin-top: -2rem;" class="form-control form-control-lg" width=250px>
-																<option value="Abuja">Abuja</option>
-																<option value="2">2</option>
-																<option value="3">3</option>
-															</select>
-															
-														</div>
-														<div class="col-xs-12 col-md-6 col-lg-4 text-center">
-															<label class="lead" for="Departure Date">Departure Date</label>
-																<input type="date" class="form-control form-control-lg">
-															</div>
-															<div class="col-xs-12 col-md-6 col-lg-4 text-center">
-																<Label for="No of passengers">No of passengers</Label>
-																	<select name="no-of-passengers" class="form-control" id="">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																	</select>
-																</div>
-													<div class="col-xs-12 col-lg-8 text-center"><br>
-														<input type="submit" class="btn btn-outline-primary btn-lg" value="BOOK NOW" style="width: 100%">
-													</div>
-												</div>
-											</div>
-												</form>
-									</div>
-
-									<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="booking-status-tab">
-										<form action="" method="POST">
-													<div class="input-group">
-															<input type="text" placeholder="Enter Reference Code" class="form-control">
-														<div class="input-group-append">
-															<input type="submit" class="btn btn-primary" value="Get Status">
-														</div>
-														
-													</div>
-										</form>
-									</div>
-
-									<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="rent-a-vehicle-tab">
-											<form class="form-group" action="" method="POST">
-													<div class="row">
-														<div class="col-xs-12 col-md-6">
-															<label for="Departure Point">Departure Point</label>
-															<input type="text" class="form-control" name="departure-point" placeholder="Enter departure point">
-														</div>
-														<div class="col-xs-12 col-md-6">
-															<label for="">Destination</label>
-															<input type="text" class="form-control" name="destination-point" placeholder="Enter Destination Point">
-														</div>
-														<div class="col-xs-12 col-md-6">
-																<label for="">Date</label>
-																<input type="date" class="form-control" name="rent-date">
-														</div>
-														<div class="col-xs-12 col-md-6"><br>
-																<input type="submit" class="btn btn-secondary btn-lg" style="width: 100%" value="Continue">
-														</div>
-													</div>
-												</form>
-									</div>
-								  </div>
-
-
-						<div class="row ml-4 mb-4 text-center justify-content-md-center">
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="booking-status-tab">
+					<form action="" method="POST">
+						<div class="input-group">
+							<input type="text" placeholder="Enter Reference Code" class="form-control">
+							<div class="input-group-append">
+								<input type="submit" class="btn btn-primary" value="Get Status">
+							</div>
 
 						</div>
+					</form>
+				</div>
 
-			</section>
+				<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="rent-a-vehicle-tab">
+					<form class="form-group" action="" method="POST">
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<label for="Departure Point">Departure Point</label>
+								<input type="text" class="form-control" name="departure-point"
+									placeholder="Enter departure point">
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<label for="">Destination</label>
+								<input type="text" class="form-control" name="destination-point"
+									placeholder="Enter Destination Point">
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<label for="">Date</label>
+								<input type="date" class="form-control" name="rent-date">
+							</div>
+							<div class="col-xs-12 col-md-6"><br>
+								<input type="submit" class="btn btn-secondary btn-lg" style="width: 100%"
+									value="Continue">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+			<div class="row ml-4 mb-4 text-center justify-content-md-center">
+
+			</div>
+
 		</section>
+	</section>
 
-		<div class="booking-tab"></div>
-		<script src="js/jquery-3.3.1.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
+	<div class="booking-tab"></div>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>
