@@ -1,94 +1,88 @@
 body {
-	
 	padding: 0px;
 	margin: 0%;
 	background-image: url("/img/slider-01.jpg");
 }
-ul.nav.nav-pills li.nav-item a.nav-link{
-	margin-bottom: 2rem;
+a#booking-status-tab.nav-link, a#rent-a-vehicle-tab.nav-link, a#first-tab.nav-link {
+	margin-left: 2rem;
 	color: #110D05;
 }
-nav.navbar.navbar-expand-lg.bg-light{
-	background-color: #ffffff !important;
+a#booking-status-tab.nav-link.active,
+a#rent-a-vehicle-tab.nav-link.active,
+a#first-tab.nav-link.active {
+	margin-left: 2rem;
+	background: #AB987A;
+	border-radius: 0px;
+	padding: 1.5rem;
+	color: #ffffff;
 }
 select.form-control{
 	border-radius: 0px;
 }
 li.nav-item a.nav-link{
-	padding: 0px 200px !important; 
-}
-a {
-	text-decoration: none;
+	padding: 0px 5px !important; 
 }
 div.banner{
-	
 	height: 1000px;
 	overflow: hidden;
 }
-
 section.booking-tab{
 	padding: 5rem !important;
 	margin-top: -2rem;
 }
-div.intro{
-	position: absolute;
-	left: 30%;
-	margin-top: 15rem !important;
-	left: .5rem;
-}
 div.banner img{
 	height: 300px;
 }
-
-#container {
-	display: flex;
-	 height: 89px
-}
-
-
-.logo {
-	font-family: Abril Fatface;
-	text-align: right;
-	font-size: 21px;
-	color: #110D05;
-	display: inline-block;
-	padding-left: 13px;
-	margin-right: 21px;
-	margin-top: 8px;
-    line-height: 13px;
-}
-
-.headerlinks {
-	list-style: none;
-	font-family: Abril Fatface;
-	text-align: right;
-	display: inline-flex;
-	padding: 8px;
-}
-
 .header-links {
 	color: #efefef;
 }
-
-.header-links:hover {
-    color: tan;
-    transition: all 0.4s ease;
-}
-
 li {
 	margin-right: 21px;
 	padding: 13px;
 }
-
-.main-view{
-	position: relative;
+.btn.btn-primary, .btn.btn-primary:active{
+	background: coral;
+	border-color: coral;
+	border-radius: 0px;
 }
-
-/*
-.booking-tab{
-	border-style: solid;
-	border-color: aliceblue;
-	background: #FFF;
-	background-size: contain;
-	border-radius: 15px;
-}*/
+.btn.btn-primary:hover{
+	border-color: rgb(250, 106, 53);
+	background: rgb(250, 106, 53);
+}
+.btn.btn-outline-primary{
+	color: #0F1626;
+	border-color: coral;
+	border-radius: 0px;
+}
+.btn.btn-secondary{
+	background: #0F1626;
+	border-color: #0F1626;
+	border-radius: 0px;
+	box-shadow: none;
+}
+.btn.btn-secondary:hover{
+	background: rgb(27, 37, 58);
+	border-color: rgb(27, 37, 58);
+}
+.btn.btn-outline-secondary{
+	border-radius: 0px;
+}
+.btn.btn-outline-primary:hover{
+	background: coral;
+	border-color: coral !important;
+	box-shadow: none;
+}
+section.booking-tab.shadow-sm{
+	background: #f5f5f5;
+	padding: 3rem;
+	margin-top: -2rem;
+	z-index: 1099;
+}
+nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
+	background-color: transparent !important;
+}
+@media (max-width: 992px){
+	nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
+		background-color: #ffffff !important;
+	}
+}
