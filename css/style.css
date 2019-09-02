@@ -7,6 +7,9 @@ a#booking-status-tab.nav-link, a#rent-a-vehicle-tab.nav-link, a#first-tab.nav-li
 	margin-left: 2rem;
 	color: #110D05;
 }
+/* ul.nav.nav-pills.justify-content-center.mb-5 li{
+	display: inline-block;
+} */
 a#booking-status-tab.nav-link.active,
 a#rent-a-vehicle-tab.nav-link.active,
 a#first-tab.nav-link.active {
@@ -16,8 +19,23 @@ a#first-tab.nav-link.active {
 	padding: 1.5rem;
 	color: #ffffff;
 }
-select.form-control{
+
+div.dash{
+	height: 3px;
+	background: #AB987A;
+	width: 60%;
+}
+h4.features{
+	color: #0F1626;
+	font-weight: bold;
+}
+select.form-control, input.form-control{
 	border-radius: 0px;
+	box-shadow: #AB987A;
+}
+select.form-control:focus, input.form-control:focus{
+	box-shadow: none;
+	border-color: #AB987A;
 }
 li.nav-item a.nav-link{
 	padding: 0px 5px !important; 
@@ -80,9 +98,41 @@ section.booking-tab.shadow-sm{
 }
 nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 	background-color: transparent !important;
+	
 }
 @media (max-width: 992px){
 	nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 		background-color: #ffffff !important;
+		box-shadow: 0px 3px 5px rgba(0,0,0,0.15);
+	}
+}
+@media (min-width: 768px){
+	div.row.show-small{
+		display: none;
+	}
+}
+@media (max-width: 768px) {
+	div.input-group-append.show-large {
+		display: none;
+	}
+	a#booking-status-tab.nav-link,
+	a#rent-a-vehicle-tab.nav-link,
+	a#first-tab.nav-link {
+		margin-left: 0rem !important;
+		padding: 0.5rem 0rem !important;
+		text-align: center;
+		color: #110D05;
+	}
+	section.booking-tab.shadow-sm{
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+	h3.display-4.text-right.p-5{
+		font-size: 30px;
+		padding: 10px !important;
+		text-align: center !important;
+	}
+	div.card:last-of-type{
+		margin-top: 2rem;
 	}
 }
