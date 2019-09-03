@@ -19,7 +19,37 @@ a#first-tab.nav-link.active {
 	padding: 1.5rem;
 	color: #ffffff;
 }
+ul.navbar-nav.ml-auto li.nav-item a.nav-link{
+	position: relative;
+}
+ul.navbar-nav.ml-auto li.nav-item a.nav-link::after{
+	content: '';
+	position: absolute;
+	height: 4px;
+	background: coral;
+	width: 0;
+	bottom: 0;
+	transition: all 500ms;
+	left: 0;
+}
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover::after{
+	width: 100%;
+}
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:active::after,
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:focus::after,
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:visited::after{
+	border-radius: 50px;
+	left: 0%;
+	width: 5px;
+	animation: unrest 1s infinite;
+}
+@keyframes unrest{
+	
+	50%{
+		left: 100%;
+	}
 
+}
 div.dash{
 	height: 3px;
 	background: #AB987A;
@@ -97,11 +127,12 @@ section.booking-tab.shadow-sm{
 	z-index: 1099;
 }
 nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
-	background-color: transparent !important;
+	background-color: white !important;
+	transition: 500ms;
 	
 }
 @media (max-width: 992px){
-	nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
+	nav.navbar.navbar-expand-lg.fixed-top.navbar-light {
 		background-color: #ffffff !important;
 		box-shadow: 0px 3px 5px rgba(0,0,0,0.15);
 	}
@@ -109,6 +140,33 @@ nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 @media (min-width: 768px){
 	div.row.show-small{
 		display: none;
+	}
+
+}
+@media (min-width: 992px){
+	div#lagos.card {
+		margin-top: 20rem;
+		margin-bottom: 0rem;
+	}
+	div#owerri.card{
+		margin-top: 13rem;
+		margin-bottom: 0rem;
+	}
+	div#abuja.card {
+		margin-top: 6rem;
+		margin-bottom: 0rem;
+	}
+	div#benin.card {
+		margin-top: -1rem;
+		margin-bottom: 0rem;
+	}
+	section.container.p-5 h3.display-4.text-right.mb-4 {
+		margin-top: -15rem;
+		margin-bottom: 0px;
+	}
+	section.container.p-5#terminals{
+		padding-bottom: 0rem;
+		margin-bottom: 0rem;
 	}
 }
 @media (max-width: 768px) {
