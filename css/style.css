@@ -19,6 +19,38 @@ a#first-tab.nav-link.active {
 	padding: 1.5rem;
 	color: #ffffff;
 }
+span.input-group-text{
+	background: #AB987A;
+	color: #ffffff;
+	border-radius: 0px;
+	border: none;
+	font-size: 12px;
+}
+ul.nav-item#social-link{
+	display: inline-flex;
+	float: right;
+}
+i.fab.fa-facebook-square,
+i.fab.fa-twitter-square,
+i.fab.fa-instagram{
+	font-size: 40px;
+	transition: all 500ms;
+}
+i.fab.fa-facebook-square:hover,
+i.fab.fa-twitter-square:hover,
+i.fab.fa-instagram:hover{
+	color: coral;
+}
+iframe#gmap_canvas:empty::before{
+	content: 'Google Map';
+	color: #dddddd;
+}
+iframe#gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: 500px;
+	width: 500px;
+}
 ul.navbar-nav.ml-auto li.nav-item a.nav-link{
 	position: relative;
 }
@@ -41,7 +73,7 @@ ul.navbar-nav.ml-auto li.nav-item a.nav-link:visited::after{
 	border-radius: 50px;
 	left: 0%;
 	width: 5px;
-	animation: unrest 1s infinite;
+	animation: unrest 1s ease-in-out infinite;
 }
 @keyframes unrest{
 	
@@ -59,11 +91,13 @@ h4.features{
 	color: #0F1626;
 	font-weight: bold;
 }
-select.form-control, input.form-control{
+select.form-control, input.form-control, textarea.form-control{
 	border-radius: 0px;
 	box-shadow: #AB987A;
 }
-select.form-control:focus, input.form-control:focus{
+select.form-control:focus,
+input.form-control:focus,
+textarea.form-control:focus {
 	box-shadow: none;
 	border-color: #AB987A;
 }
@@ -88,7 +122,11 @@ li {
 	margin-right: 21px;
 	padding: 13px;
 }
-.btn.btn-primary, .btn.btn-primary:active{
+.btn-primary:not(:disabled):not(.disabled):active{
+	background: coral !important;
+	border-color: coral !important;
+}
+.btn.btn-primary, .btn.btn-primary:active, .btn.btn-primary:focus{
 	background: coral;
 	border-color: coral;
 	border-radius: 0px;
@@ -115,22 +153,84 @@ li {
 .btn.btn-outline-secondary{
 	border-radius: 0px;
 }
+div.toast-header{
+	background: coral !important;
+	color: #ffffff;
+}
+div.toaster{
+	width: 300px;
+	z-index: 1030;
+	position: fixed;
+	background: #ffffff;
+	bottom: 0;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	word-wrap: break-word;
+	right: 0;
+	animation: floating 3s ease-in-out infinite;
+}
+
+	@keyframes floating {
+		0%{
+
+		}
+		50% {
+			transform: translateY(5px);		
+		}
+	}
+div.toast-header{
+	background: #f5f5f5;
+}
 .btn.btn-outline-primary:hover{
 	background: coral;
 	border-color: coral !important;
 	box-shadow: none;
 }
+.modal{
+	z-index: 1040;
+	background: rgba(0,0,0,0.4);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
 section.booking-tab.shadow-sm{
-	background: #f5f5f5;
+	/* background: #f5f5f5; */
+	background: linear-gradient(to Bottom Right, #f5f5f5, #ffffff);
 	padding: 3rem;
 	margin-top: -2rem;
-	z-index: 1099;
+	z-index: 1020;
+	transition: all ease-in-out 500ms;
+	position: relative;
+	overflow: hidden;
+}
+section.booking-tab.shadow-sm::before{
+	content: '';
+	height: 10px;
+	width: 70rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to Right, coral 40%, rgb(27, 37, 58) 50%);
+}
+section.booking-tab.shadow-sm::after{
+	height: 10px;
+	width: 70rem;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(to Right, rgb(27, 37, 58) 40%, coral 50%);
 }
 nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 	background-color: white !important;
 	transition: 500ms;
 	
 }
+
+/* MEDIA QUERIES */
+
 @media (max-width: 992px){
 	nav.navbar.navbar-expand-lg.fixed-top.navbar-light {
 		background-color: #ffffff !important;
@@ -141,7 +241,6 @@ nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 	div.row.show-small{
 		display: none;
 	}
-
 }
 @media (min-width: 992px){
 	div#lagos.card {
@@ -167,11 +266,21 @@ nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light {
 	section.container.p-5#terminals{
 		padding-bottom: 0rem;
 		margin-bottom: 0rem;
+		background-image: url('img/terminal-mini.jpg');
+		background-size: cover;
 	}
 }
 @media (max-width: 768px) {
 	div.input-group-append.show-large {
 		display: none;
+	}
+	img.bottom-logo{
+		margin-top: -10px !important;
+	}
+	iframe#gmap_canvas{
+		height: 500px;
+		width: 300px;
+		
 	}
 	a#booking-status-tab.nav-link,
 	a#rent-a-vehicle-tab.nav-link,
